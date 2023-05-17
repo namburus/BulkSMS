@@ -3,7 +3,8 @@
 
 small automation framework(login test) for BulkSMS project.
 
-pre-requisites: Intellij IDEA, JDK 11.
+pre-requisites: Intellij IDEA, JDK 11, webdriver manager jar file(https://github.com/bonigarcia/webdrivermanager)
+
 
 Process:
 
