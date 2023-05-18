@@ -13,6 +13,7 @@ public class Hooks {
     WebDriver driver;
     public static FileReader fr;
 
+    //this code gets executed first before any test execution starts and starts the driver
     @Before
     public void start() throws IOException {
         if (driver == null) {
@@ -23,6 +24,8 @@ public class Hooks {
             driver.get(prop.getProperty("url"));
         }
     }
+
+    //this code gets executed last after the tests execution ends to close the driver
     @After
     public void teardown(){
         if (driver!= null) {
