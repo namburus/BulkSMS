@@ -20,7 +20,7 @@ public class Hooks {
             fr = new FileReader("D:/SendMessages/src/test/java/utilities/config.properties");
             Properties prop = new Properties();
             prop.load(fr);
-            driver = driverfactory.setup();
+            driver = driverfactory.getDriver();
             driver.get(prop.getProperty("url"));
         }
     }
