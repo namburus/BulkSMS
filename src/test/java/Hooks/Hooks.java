@@ -17,10 +17,10 @@ public class Hooks {
     @Before
     public void start() throws IOException {
         if (driver == null) {
+            driver = driverfactory.setup();
             fr = new FileReader("D:/SendMessages/src/test/java/utilities/config.properties");
             Properties prop = new Properties();
             prop.load(fr);
-            driver = driverfactory.getDriver();
             driver.get(prop.getProperty("url"));
         }
     }

@@ -9,9 +9,9 @@ import java.time.Duration;
 public class driverfactory {
      static WebDriver driver;
 //driver initialised based on the input given in the env variable value of browser
-    public static void setup() throws IOException {
+    public static WebDriver setup() throws IOException {
         if (driver == null) {
-            switch (System.getenv("browser")) {
+            switch (System.getenv("browser").toLowerCase()) {
                 case ("firefox"):
                     System.out.println("Browser value from env variable: " + System.getenv("browser"));
                     driver = WebDriverManager.firefoxdriver().create();
@@ -37,9 +37,8 @@ public class driverfactory {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
         }
-    }
-    public static WebDriver getDriver() {
         return driver;
     }
+
 }
 

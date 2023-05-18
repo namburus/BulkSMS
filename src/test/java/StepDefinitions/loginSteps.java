@@ -15,7 +15,7 @@ public class loginSteps {
     loginPage lp;
 
     public loginSteps() throws IOException {
-        driver = driverfactory.getDriver();
+        driver = driverfactory.setup();
         lp = new loginPage(driver);
     }
 
